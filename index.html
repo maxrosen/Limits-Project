@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<head>
+<title>Limits Project - Home</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <ul id="nav"><b>
+      <li id="item"><a href="/Limits Project/index.html" id="menu"><color="white">Home</a></li>
+      <li id="item"><a href="/Limits Project/trig.html" id="menu"><color="white">Trig</a></li>      
+      <li id="item"><a href="/Limits Project/nonexist.html" id="menu"><color="white">Nonexistant</a></li>
+    </b></ul>
+
+<div style="margin-left:25%;padding:1px 16px;margin-bottom:15px;">
+<br>
+<div id="message"><b>Limits</b></div>
+<table align=center>
+<tr>
+<tr><td><h4><b>AP Calc AB Limits Project by Max Rosen and John Fenton</b></h4></td></tr>
+</table>
+
+<div id="bar"><h3>How to Express Limits Symbolically</h3>
+	<hr>
+	<img src="limit.png"><br>
+	<button onclick="togglePhrase()" id="phraseButton">Show phrase</button>
+	<p id="phrase" style="display: none;">The limit of &#402;(x) as x approaches a is equal to b.</p>
+
+	<script>
+	 function togglePhrase() { 
+	    // get the clock 
+	    var myPhrase = document.getElementById('phrase');
+
+	    // get the current value of the clock's display property 
+	    var displaySetting = myPhrase.style.display;
+
+	    // also get the clock button, so we can change what it says 
+	    var phraseButton = document.getElementById('phraseButton');
+					
+	    // now toggle the clock and the button text, depending on current state
+	    if (displaySetting == 'block') { 
+	      // clock is visible. hide it
+	      myPhrase.style.display = 'none';
+	      // change button text
+	      phraseButton.innerHTML = 'Show phrase';
+	    }
+	    else { 
+	      // clock is hidden. show it 
+	      myPhrase.style.display = 'block';
+	      // change button text
+	      phraseButton.innerHTML = 'Hide phrase';
+	    }
+	  }  
+	</script>
+
+</div>
+<br>
+<div id="bar"><h3>How to Express Limits Symbolically</h3>
+	<hr>
+	<img src="basic_limit.gif">
+</div>
+<br>
+<div id="bar"><h3>Types of Limits</h3>
+		<hr>
+	<h5>One-Sided Limits</h5>
+	<img src="one-sided.gif"><br>
+	x approaches a from one side, it only approaches from the right hand <b>or</b> the left hand side.
+		<hr>
+	<h5>Limits at Infinity</h5>
+	<img src="">
+		<hr>
+	<h5>Infinite Limits</h5>
+	<img src="infinite_limit.png"><br>
+	x approaches a from both sides, but it never reaches a at a defined value.
+</div>
+
+</tr></table></div>
+
+
+</body>

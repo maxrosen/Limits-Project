@@ -23,8 +23,39 @@
 <div id="bar">
 
 	<img src="2sided.jpg" width="400"><br>
-	Nonexistant limits are limits that have no continuity. There is no conitnuous function where both sides meet at a certain point.
-	<br><br>
+
+
+  <button onclick="togglePhrase()" id="phraseButton">What are nonexistant limits?</button><br><br>
+  <p id="phrase" style="display: none;">Nonexistant limits are limits that have no continuity. There is no conitnuous function where both sides meet at a certain point.
+  <br></p>
+
+  <script>
+   function togglePhrase() { 
+      // get the clock 
+      var myPhrase = document.getElementById('phrase');
+
+      // get the current value of the clock's display property 
+      var displaySetting = myPhrase.style.display;
+
+      // also get the clock button, so we can change what it says 
+      var phraseButton = document.getElementById('phraseButton');
+          
+      // now toggle the clock and the button text, depending on current state
+      if (displaySetting == 'block') { 
+        // clock is visible. hide it
+        myPhrase.style.display = 'none';
+        // change button text
+        phraseButton.innerHTML = 'Show definition';
+      }
+      else { 
+        // clock is hidden. show it 
+        myPhrase.style.display = 'block';
+        // change button text
+        phraseButton.innerHTML = 'Hide definition';
+      }
+    }  
+  </script>
+
 	<img src="twosidetable.png" width="400"><br>
 	When looking at a table, it is clear that as the x values from both sides become closer together, the function's values do not come near each other, they actually are moving farther apart.
 

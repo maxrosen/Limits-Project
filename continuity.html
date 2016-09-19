@@ -23,7 +23,39 @@
 <div id="bar">
 
 <img src="continuity.jpg" width="500"><br>
-A function in continuous if there is no break between any points of the function.<br>
+
+
+  <button onclick="togglePhrase()" id="phraseButton">What is continuity?</button><br><br>
+  <p id="phrase" style="display: none;">A function is continuous if there is no break between any points of the function.<br></p>
+
+  <script>
+   function togglePhrase() { 
+      // get the clock 
+      var myPhrase = document.getElementById('phrase');
+
+      // get the current value of the clock's display property 
+      var displaySetting = myPhrase.style.display;
+
+      // also get the clock button, so we can change what it says 
+      var phraseButton = document.getElementById('phraseButton');
+          
+      // now toggle the clock and the button text, depending on current state
+      if (displaySetting == 'block') { 
+        // clock is visible. hide it
+        myPhrase.style.display = 'none';
+        // change button text
+        phraseButton.innerHTML = 'Show definition';
+      }
+      else { 
+        // clock is hidden. show it 
+        myPhrase.style.display = 'block';
+        // change button text
+        phraseButton.innerHTML = 'Hide definition';
+      }
+    }  
+  </script>
+
+
 Polynomial, rational, power, exponential, logarithmic, and trigonometric functions are continuous at all points in their domains. This means that if a domain of a function, say, sin(x)/x, is continuous at all points that are NOT 0, because its domain is, <img src="MSP31ecb331dhg57d3260000251aa719g63ha4bd.gif">
 <br><br>
 <img src="continue.jpg" width="400">
